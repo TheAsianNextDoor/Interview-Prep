@@ -9,7 +9,7 @@ export const FileExplorer = () => {
         <Folder />
       </div>
       <div>
-        <File />
+        <File fileLabel="hi.txt" />
       </div>
     </>
   );
