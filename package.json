@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm --filter demos dev",
+    "dev:file-explorer": "pnpm --filter file-explorer dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -26,6 +27,7 @@
     "eslint-plugin-tailwindcss": "^3.8.3",
     "eslint-plugin-vitest-globals": "^1.2.0",
     "prettier": "^2.8.3",
+    "tailwind-config": "workspace:^1.0.0",
     "typescript": "^4.9.3"
   }
 }

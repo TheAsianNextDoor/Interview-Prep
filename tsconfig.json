@@ -24,7 +24,7 @@
       "path": "apps/demos"
     },
     {
-      "path": "packages/folder-tree"
+      "path": "packages/file-explorer"
     }
   ]
 }
