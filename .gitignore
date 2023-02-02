@@ -1,0 +1,31 @@
+dist
+.output
+.vercel
+.netlify
+netlify
+
+# dependencies
+**/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+*.launch
+
+# Temp
+gitignore
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Env
+.env.development
+.env.test
+.env.production
+
+# Dev tools
+.eslintcache
+stats.html
+.vscode/chrome-userdatadir
