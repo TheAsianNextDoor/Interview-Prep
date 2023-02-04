@@ -7,33 +7,35 @@ import { useClickOutside } from '../hooks/useClickOutside';
 import type { KeyboardEvent } from 'react';
 
 interface props {
-  fileLabel: string;
+  label: string;
+  inputVisible: boolean;
 }
 
-export const File = ({ fileLabel }: props) => {
-  const [fileName, setFileName] = useState(fileLabel);
-  const [inputValue, setInputValue] = useState(fileLabel);
-  const [hasFocus, setHasFocus] = useState(false);
+export const File = ({ label, inputVisible }: props) => {
+  const [fileName, setFileName] = useState(label);
+  const [inputValue, setInputValue] = useState(label);
+  const [isInputVisible, setIsInputVisible] = useState(inputVisible);
 
   const containerRef = useRef(null);
   const clickedOutside = useClickOutside(containerRef);
 
   useEffect(() => {
-    // reset values and hide input
-    setInputValue(fileName);
-    setHasFocus(false);
+    // handle click outside
+    if (clickedOutside) {
+      setIsInputVisible(false);
+    }
   }, [clickedOutside]);
 
   const handleChange = (evt: KeyboardEvent<HTMLInputElement>) => {
     if (evt.key === 'Enter') {
       setFileName(evt.target.value);
-      setHasFocus(false);
+      setIsInputVisible(false);
     }
   };
 
   return (
-    <div ref={containerRef} className="w-60 bg-lime-300 p-1">
-      {hasFocus ? (
+    <div ref={containerRef} className="w-80 bg-green-700 p-1">
+      {isInputVisible ? (
         <div className="flex items-center">
           <FontAwesomeIcon className="pr-3" icon={faFile} />
           <input
@@ -46,7 +48,7 @@ export const File = ({ fileLabel }: props) => {
       ) : (
         <div className="flex items-center">
           <FontAwesomeIcon className="pr-3" icon={faFile} />
-          <label onClick={() => setHasFocus(true)}>{fileName}</label>
+          <label onClick={() => setIsInputVisible(true)}>{fileName}</label>
         </div>
       )}
     </div>
