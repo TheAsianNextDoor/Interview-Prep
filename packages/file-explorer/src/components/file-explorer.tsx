@@ -19,14 +19,13 @@ export const FileExplorer = () => {
         ...(isFolder && { isExpanded: true }),
         ...(isFolder && { children: [] }),
       });
+
+      return;
     }
 
-    let latestNode = [];
-    latestNode = tree?.children?.map((item) => {
+    tree?.children?.forEach((item) => {
       return addItem(item, folderId, label, isFolder);
     });
-
-    return { ...tree, latestNode };
   };
 
   const addItemToDirectory = (rootDir: folder, folderId: string, label: string, isFolder: boolean) => {
