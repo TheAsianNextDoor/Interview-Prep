@@ -19,7 +19,6 @@ importers:
       eslint-plugin-tailwindcss: ^3.8.3
       eslint-plugin-vitest-globals: ^1.2.0
       prettier: ^2.8.3
-      tailwind-config: workspace:^1.0.0
       typescript: ^4.9.3
     devDependencies:
       '@typescript-eslint/eslint-plugin': 5.50.0_go4drrxstycfikanvu45pi4vgq
@@ -37,7 +36,6 @@ importers:
       eslint-plugin-tailwindcss: 3.8.3
       eslint-plugin-vitest-globals: 1.2.0
       prettier: 2.8.3
-      tailwind-config: link:packages/tailwind-config
       typescript: 4.9.5
 
   apps/demos:
@@ -72,6 +70,7 @@ importers:
       immer: ^9.0.19
       react: ^18.2.0
       react-dom: ^18.2.0
+      tailwind-config: workspace:*
       typescript: ^4.9.3
       vite: ^4.0.0
     dependencies:
@@ -81,6 +80,7 @@ importers:
       immer: 9.0.19
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      tailwind-config: link:../tailwind-config
     devDependencies:
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
