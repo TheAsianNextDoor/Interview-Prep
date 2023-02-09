@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "pnpm --filter demos dev",
     "dev:file-explorer": "pnpm --filter file-explorer dev",
+    "dev:express-server": "pnpm --filter express-server dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -27,6 +28,7 @@
     "eslint-plugin-tailwindcss": "^3.8.3",
     "eslint-plugin-vitest-globals": "^1.2.0",
     "prettier": "^2.8.3",
+    "tsx": "^3.12.2",
     "typescript": "^4.9.3"
   }
 }
