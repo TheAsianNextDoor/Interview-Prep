@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { getById, getProductIdsWithItem } from '../controllers/products';
+import { getById, getProductIdsWithItem } from '../controllers/products/products';
 
 export const productRouter = express.Router();
 
