@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "pnpm --filter demos dev",
     "dev:file-explorer": "pnpm --filter file-explorer dev",
-    "dev:express-server": "pnpm --filter express-server dev",
+    "dev:express-server": "pnpm --filter @interview-prep/express-server dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

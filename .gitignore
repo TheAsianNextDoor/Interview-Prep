@@ -15,6 +15,7 @@ netlify
 
 # Temp
 gitignore
+*.log
 
 # System Files
 .DS_Store

@@ -1,11 +1,21 @@
 import { BadRequestError } from '../errors/bad-request-error';
 
-import type { ZodSchema } from 'zod';
+import type { ZodSchema, ZodTypeAny, infer as zodInfer } from 'zod';
 
-export const parseParams = (schema: ZodSchema, data: unknown, message = 'Bad params') => {
+export const parseParams = <T extends ZodTypeAny>(schema: T, data: unknown, message = 'Bad params'): zodInfer<T> => {
   try {
-    schema.parse(data);
+    return schema.parse(data);
   } catch (err) {
     throw new BadRequestError(message);
   }
 };
+
+export const parseFactory =
+  <T extends ZodTypeAny>(schema: T) =>
+  (data: unknown): zodInfer<T> => {
+    try {
+      return schema.parse(data);
+    } catch (err) {
+      throw new BadRequestError();
+    }
+  };

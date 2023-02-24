@@ -24,7 +24,7 @@ export const login: RequestHandler = asyncHandlerMiddleware(async (req, res) => 
     userName,
   });
 
-  const isCorrectPassword = await bcrypt.compare(password, user?.password || '');
+  const isCorrectPassword = await bcrypt.compare(password as string, user?.password || '');
 
   if (!isCorrectPassword) {
     throw new BadRequestError('Incorrect password');
