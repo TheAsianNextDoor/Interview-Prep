@@ -30,7 +30,8 @@ const mainRouter = express.Router();
 app.use(`/api/${version}`, mainRouter);
 
 mainRouter.use('/auth', authRouter);
-mainRouter.use('/products', authHandlerMiddleware, productRouter);
+mainRouter.use('/products', productRouter);
+// mainRouter.use('/products', authHandlerMiddleware, productRouter);
 
 app.use(endLoggingHandlerMiddleware);
 

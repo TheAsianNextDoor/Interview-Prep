@@ -1,11 +1,12 @@
 {
-  "name": "express-server",
+  "name": "@interview-prep/express-server",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "tsx watch ./src/app.ts"
   },
   "dependencies": {
+    "@interview-prep/logging": "workspace:^1.0.0",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
