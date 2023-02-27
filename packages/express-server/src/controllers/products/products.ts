@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { parseParams } from '../utils/schema-utils';
+import { parseParams } from '../../utils/schema-utils';
 
 import type { RequestHandler } from 'express';
-import { asyncHandlerMiddleware } from '../middleware/async-handler';
+import { asyncHandlerMiddleware } from '../../middleware/async-handler';
 
 const database = {
   1: ['a', 'b', 'c'],
